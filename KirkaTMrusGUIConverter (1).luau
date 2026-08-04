@@ -133,13 +133,6 @@ TextButtongotolobby0.Visible = true
 TextButtongotolobby0.ZIndex = 1
 TextButtongotolobby0.Parent = FrameFrame0
 
-LocalScriptLocalScript0 = Instance.new("LocalScript")
-LocalScriptLocalScript0.Archivable = true
-LocalScriptLocalScript0.Disabled = false
-LocalScriptLocalScript0.LinkedSource = ""
-LocalScriptLocalScript0.Name = "LocalScript"
-LocalScriptLocalScript0.Parent = TextButtongotolobby0
-
 TextButtongotosherrif1 = Instance.new("TextButton")
 TextButtongotosherrif1.Active = true
 TextButtongotosherrif1.AnchorPoint = Vector2.new(0, 0)
@@ -183,13 +176,6 @@ TextButtongotosherrif1.TextYAlignment = Enum.TextYAlignment.Center
 TextButtongotosherrif1.Visible = true
 TextButtongotosherrif1.ZIndex = 1
 TextButtongotosherrif1.Parent = FrameFrame0
-
-LocalScriptLocalScript1 = Instance.new("LocalScript")
-LocalScriptLocalScript1.Archivable = true
-LocalScriptLocalScript1.Disabled = false
-LocalScriptLocalScript1.LinkedSource = ""
-LocalScriptLocalScript1.Name = "LocalScript"
-LocalScriptLocalScript1.Parent = TextButtongotosherrif1
 
 TextButtongotomurd2 = Instance.new("TextButton")
 TextButtongotomurd2.Active = true
@@ -235,13 +221,6 @@ TextButtongotomurd2.Visible = true
 TextButtongotomurd2.ZIndex = 1
 TextButtongotomurd2.Parent = FrameFrame0
 
-LocalScriptLocalScript2 = Instance.new("LocalScript")
-LocalScriptLocalScript2.Archivable = true
-LocalScriptLocalScript2.Disabled = false
-LocalScriptLocalScript2.LinkedSource = ""
-LocalScriptLocalScript2.Name = "LocalScript"
-LocalScriptLocalScript2.Parent = TextButtongotomurd2
-
 TextButtonIMMORTAL3 = Instance.new("TextButton")
 TextButtonIMMORTAL3.Active = true
 TextButtonIMMORTAL3.AnchorPoint = Vector2.new(0, 0)
@@ -285,13 +264,6 @@ TextButtonIMMORTAL3.TextYAlignment = Enum.TextYAlignment.Center
 TextButtonIMMORTAL3.Visible = true
 TextButtonIMMORTAL3.ZIndex = 1
 TextButtonIMMORTAL3.Parent = FrameFrame0
-
-LocalScriptLocalScript3 = Instance.new("LocalScript")
-LocalScriptLocalScript3.Archivable = true
-LocalScriptLocalScript3.Disabled = false
-LocalScriptLocalScript3.LinkedSource = ""
-LocalScriptLocalScript3.Name = "LocalScript"
-LocalScriptLocalScript3.Parent = TextButtonIMMORTAL3
 
 TextButtonknife14 = Instance.new("TextButton")
 TextButtonknife14.Active = true
@@ -337,13 +309,6 @@ TextButtonknife14.Visible = true
 TextButtonknife14.ZIndex = 1
 TextButtonknife14.Parent = FrameFrame0
 
-LocalScriptLocalScript4 = Instance.new("LocalScript")
-LocalScriptLocalScript4.Archivable = true
-LocalScriptLocalScript4.Disabled = false
-LocalScriptLocalScript4.LinkedSource = ""
-LocalScriptLocalScript4.Name = "LocalScript"
-LocalScriptLocalScript4.Parent = TextButtonknife14
-
 TextButtonknife25 = Instance.new("TextButton")
 TextButtonknife25.Active = true
 TextButtonknife25.AnchorPoint = Vector2.new(0, 0)
@@ -388,9 +353,9 @@ TextButtonknife25.Visible = true
 TextButtonknife25.ZIndex = 1
 TextButtonknife25.Parent = FrameFrame0
 
-LocalScriptLocalScript5 = Instance.new("LocalScript")
-LocalScriptLocalScript5.Archivable = true
-LocalScriptLocalScript5.Disabled = false
-LocalScriptLocalScript5.LinkedSource = ""
-LocalScriptLocalScript5.Name = "LocalScript"
-LocalScriptLocalScript5.Parent = TextButtonknife25
+LocalScriptMainController0 = Instance.new("LocalScript")
+LocalScriptMainController0.Archivable = true
+LocalScriptMainController0.Disabled = false
+LocalScriptMainController0.LinkedSource = ""
+LocalScriptMainController0.Name = "MainController"
+LocalScriptMainController0.Parent = FrameFrame0
