@@ -1,361 +1,193 @@
---Generated with KirkaTMrus GUI converter!!!
-ScreenGuiScreenGui0 = Instance.new("ScreenGui")
-ScreenGuiScreenGui0.Archivable = true
-ScreenGuiScreenGui0.AutoLocalize = true
-ScreenGuiScreenGui0.DisplayOrder = 0
-ScreenGuiScreenGui0.Enabled = true
-ScreenGuiScreenGui0.IgnoreGuiInset = false
-ScreenGuiScreenGui0.Name = "ScreenGui"
-ScreenGuiScreenGui0.ResetOnSpawn = true
-ScreenGuiScreenGui0.RootLocalizationTable = nil
-ScreenGuiScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGuiScreenGui0.Parent = game.Players.LocalPlayer.PlayerGui
+--[[
+	All-in-one GUI + Button Logic Script
+	Creates the entire GUI programmatically and wires up all button actions.
+]]
 
-FrameFrame0 = Instance.new("Frame")
-FrameFrame0.Active = false
-FrameFrame0.AnchorPoint = Vector2.new(0, 0)
-FrameFrame0.Archivable = true
-FrameFrame0.AutoLocalize = true
-FrameFrame0.BackgroundColor3 = Color3.new(0, 0, 0)
-FrameFrame0.BackgroundTransparency = 0
-FrameFrame0.BorderColor3 = Color3.new(0, 0, 0)
-FrameFrame0.BorderSizePixel = 0
-FrameFrame0.ClipsDescendants = false
-FrameFrame0.LayoutOrder = 0
-FrameFrame0.Name = "Frame"
-FrameFrame0.NextSelectionDown = nil
-FrameFrame0.NextSelectionLeft = nil
-FrameFrame0.NextSelectionRight = nil
-FrameFrame0.NextSelectionUp = nil
-FrameFrame0.Position = UDim2.new(0.30221810936927795, 0, 0.2662632465362549, 0)
-FrameFrame0.RootLocalizationTable = nil
-FrameFrame0.Rotation = 0
-FrameFrame0.Selectable = false
-FrameFrame0.SelectionImageObject = nil
-FrameFrame0.Size = UDim2.new(0, 428, 0, 309)
-FrameFrame0.SizeConstraint = Enum.SizeConstraint.RelativeXY
-FrameFrame0.Style = Enum.FrameStyle.Custom
-FrameFrame0.Visible = true
-FrameFrame0.ZIndex = 1
-FrameFrame0.Parent = ScreenGuiScreenGui0
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
 
-UICornerUICorner0 = Instance.new("UICorner")
-UICornerUICorner0.CornerRadius = UDim.new(0, 8)
-UICornerUICorner0.Archivable = true
-UICornerUICorner0.Name = "UICorner"
-UICornerUICorner0.BottomLeftRadius = UDim.new(0, 8)
-UICornerUICorner0.BottomRightRadius = UDim.new(0, 8)
-UICornerUICorner0.TopLeftRadius = UDim.new(0, 8)
-UICornerUICorner0.TopRightRadius = UDim.new(0, 8)
-UICornerUICorner0.Parent = FrameFrame0
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
 
-TextLabelTextLabel0 = Instance.new("TextLabel")
-TextLabelTextLabel0.Active = false
-TextLabelTextLabel0.AnchorPoint = Vector2.new(0, 0)
-TextLabelTextLabel0.Archivable = true
-TextLabelTextLabel0.AutoLocalize = true
-TextLabelTextLabel0.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabelTextLabel0.BackgroundTransparency = 1
-TextLabelTextLabel0.BorderColor3 = Color3.new(0, 0, 0)
-TextLabelTextLabel0.BorderSizePixel = 0
-TextLabelTextLabel0.ClipsDescendants = false
-TextLabelTextLabel0.Font = Enum.Font.SourceSansBold
-TextLabelTextLabel0.LayoutOrder = 0
-TextLabelTextLabel0.LineHeight = 1
-TextLabelTextLabel0.Name = "TextLabel"
-TextLabelTextLabel0.NextSelectionDown = nil
-TextLabelTextLabel0.NextSelectionLeft = nil
-TextLabelTextLabel0.NextSelectionRight = nil
-TextLabelTextLabel0.NextSelectionUp = nil
-TextLabelTextLabel0.Position = UDim2.new(0.26635512709617615, 0, 0, 0)
-TextLabelTextLabel0.RootLocalizationTable = nil
-TextLabelTextLabel0.Rotation = 0
-TextLabelTextLabel0.Selectable = false
-TextLabelTextLabel0.SelectionImageObject = nil
-TextLabelTextLabel0.Size = UDim2.new(0, 200, 0, 50)
-TextLabelTextLabel0.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextLabelTextLabel0.Text = "BLUX/KIRKA MM2"
-TextLabelTextLabel0.TextColor3 = Color3.new(1, 1, 1)
-TextLabelTextLabel0.TextScaled = true
-TextLabelTextLabel0.TextSize = 14
-TextLabelTextLabel0.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextLabelTextLabel0.TextStrokeTransparency = 1
-TextLabelTextLabel0.TextTransparency = 0
-TextLabelTextLabel0.TextTruncate = Enum.TextTruncate.None
-TextLabelTextLabel0.TextWrapped = true
-TextLabelTextLabel0.TextXAlignment = Enum.TextXAlignment.Center
-TextLabelTextLabel0.TextYAlignment = Enum.TextYAlignment.Center
-TextLabelTextLabel0.Visible = true
-TextLabelTextLabel0.ZIndex = 1
-TextLabelTextLabel0.Parent = FrameFrame0
+-- ============================================================
+-- Build the GUI
+-- ============================================================
 
-TextButtongotolobby0 = Instance.new("TextButton")
-TextButtongotolobby0.Active = true
-TextButtongotolobby0.AnchorPoint = Vector2.new(0, 0)
-TextButtongotolobby0.Archivable = true
-TextButtongotolobby0.AutoButtonColor = true
-TextButtongotolobby0.AutoLocalize = true
-TextButtongotolobby0.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-TextButtongotolobby0.BackgroundTransparency = 0
-TextButtongotolobby0.BorderColor3 = Color3.new(0.14902, 0.14902, 0.14902)
-TextButtongotolobby0.BorderSizePixel = 0
-TextButtongotolobby0.ClipsDescendants = false
-TextButtongotolobby0.Font = Enum.Font.SourceSansBold
-TextButtongotolobby0.LayoutOrder = 0
-TextButtongotolobby0.LineHeight = 1
-TextButtongotolobby0.Modal = false
-TextButtongotolobby0.Name = "goto lobby"
-TextButtongotolobby0.NextSelectionDown = nil
-TextButtongotolobby0.NextSelectionLeft = nil
-TextButtongotolobby0.NextSelectionRight = nil
-TextButtongotolobby0.NextSelectionUp = nil
-TextButtongotolobby0.Position = UDim2.new(0.049065422266721725, 0, 0.23948219418525696, 0)
-TextButtongotolobby0.RootLocalizationTable = nil
-TextButtongotolobby0.Rotation = 0
-TextButtongotolobby0.Selectable = true
-TextButtongotolobby0.Selected = false
-TextButtongotolobby0.SelectionImageObject = nil
-TextButtongotolobby0.Size = UDim2.new(0, 179, 0, 50)
-TextButtongotolobby0.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextButtongotolobby0.Style = Enum.ButtonStyle.Custom
-TextButtongotolobby0.Text = "GOTO LOBBY"
-TextButtongotolobby0.TextColor3 = Color3.new(1, 1, 1)
-TextButtongotolobby0.TextScaled = true
-TextButtongotolobby0.TextSize = 14
-TextButtongotolobby0.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextButtongotolobby0.TextStrokeTransparency = 1
-TextButtongotolobby0.TextTransparency = 0
-TextButtongotolobby0.TextTruncate = Enum.TextTruncate.None
-TextButtongotolobby0.TextWrapped = true
-TextButtongotolobby0.TextXAlignment = Enum.TextXAlignment.Center
-TextButtongotolobby0.TextYAlignment = Enum.TextYAlignment.Center
-TextButtongotolobby0.Visible = true
-TextButtongotolobby0.ZIndex = 1
-TextButtongotolobby0.Parent = FrameFrame0
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "ScreenGui"
+screenGui.ResetOnSpawn = true
+screenGui.IgnoreGuiInset = false
+screenGui.ScreenInsets = Enum.ScreenInsets.CoreUISafeInsets
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-TextButtongotosherrif1 = Instance.new("TextButton")
-TextButtongotosherrif1.Active = true
-TextButtongotosherrif1.AnchorPoint = Vector2.new(0, 0)
-TextButtongotosherrif1.Archivable = true
-TextButtongotosherrif1.AutoButtonColor = true
-TextButtongotosherrif1.AutoLocalize = true
-TextButtongotosherrif1.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-TextButtongotosherrif1.BackgroundTransparency = 0
-TextButtongotosherrif1.BorderColor3 = Color3.new(0.14902, 0.14902, 0.14902)
-TextButtongotosherrif1.BorderSizePixel = 0
-TextButtongotosherrif1.ClipsDescendants = false
-TextButtongotosherrif1.Font = Enum.Font.SourceSansBold
-TextButtongotosherrif1.LayoutOrder = 0
-TextButtongotosherrif1.LineHeight = 1
-TextButtongotosherrif1.Modal = false
-TextButtongotosherrif1.Name = "goto sherrif"
-TextButtongotosherrif1.NextSelectionDown = nil
-TextButtongotosherrif1.NextSelectionLeft = nil
-TextButtongotosherrif1.NextSelectionRight = nil
-TextButtongotosherrif1.NextSelectionUp = nil
-TextButtongotosherrif1.Position = UDim2.new(0.049065422266721725, 0, 0.4886731505393982, 0)
-TextButtongotosherrif1.RootLocalizationTable = nil
-TextButtongotosherrif1.Rotation = 0
-TextButtongotosherrif1.Selectable = true
-TextButtongotosherrif1.Selected = false
-TextButtongotosherrif1.SelectionImageObject = nil
-TextButtongotosherrif1.Size = UDim2.new(0, 179, 0, 50)
-TextButtongotosherrif1.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextButtongotosherrif1.Style = Enum.ButtonStyle.Custom
-TextButtongotosherrif1.Text = "GOTO SHERRIF"
-TextButtongotosherrif1.TextColor3 = Color3.new(1, 1, 1)
-TextButtongotosherrif1.TextScaled = true
-TextButtongotosherrif1.TextSize = 14
-TextButtongotosherrif1.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextButtongotosherrif1.TextStrokeTransparency = 1
-TextButtongotosherrif1.TextTransparency = 0
-TextButtongotosherrif1.TextTruncate = Enum.TextTruncate.None
-TextButtongotosherrif1.TextWrapped = true
-TextButtongotosherrif1.TextXAlignment = Enum.TextXAlignment.Center
-TextButtongotosherrif1.TextYAlignment = Enum.TextYAlignment.Center
-TextButtongotosherrif1.Visible = true
-TextButtongotosherrif1.ZIndex = 1
-TextButtongotosherrif1.Parent = FrameFrame0
+local frame = Instance.new("Frame")
+frame.Name = "Frame"
+frame.Size = UDim2.new(0, 428, 0, 309)
+frame.Position = UDim2.new(0.302218109, 0, 0.266263247, 0)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
 
-TextButtongotomurd2 = Instance.new("TextButton")
-TextButtongotomurd2.Active = true
-TextButtongotomurd2.AnchorPoint = Vector2.new(0, 0)
-TextButtongotomurd2.Archivable = true
-TextButtongotomurd2.AutoButtonColor = true
-TextButtongotomurd2.AutoLocalize = true
-TextButtongotomurd2.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-TextButtongotomurd2.BackgroundTransparency = 0
-TextButtongotomurd2.BorderColor3 = Color3.new(0.14902, 0.14902, 0.14902)
-TextButtongotomurd2.BorderSizePixel = 0
-TextButtongotomurd2.ClipsDescendants = false
-TextButtongotomurd2.Font = Enum.Font.SourceSansBold
-TextButtongotomurd2.LayoutOrder = 0
-TextButtongotomurd2.LineHeight = 1
-TextButtongotomurd2.Modal = false
-TextButtongotomurd2.Name = "goto murd"
-TextButtongotomurd2.NextSelectionDown = nil
-TextButtongotomurd2.NextSelectionLeft = nil
-TextButtongotomurd2.NextSelectionRight = nil
-TextButtongotomurd2.NextSelectionUp = nil
-TextButtongotomurd2.Position = UDim2.new(0.5303738117218018, 0, 0.4886731505393982, 0)
-TextButtongotomurd2.RootLocalizationTable = nil
-TextButtongotomurd2.Rotation = 0
-TextButtongotomurd2.Selectable = true
-TextButtongotomurd2.Selected = false
-TextButtongotomurd2.SelectionImageObject = nil
-TextButtongotomurd2.Size = UDim2.new(0, 179, 0, 50)
-TextButtongotomurd2.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextButtongotomurd2.Style = Enum.ButtonStyle.Custom
-TextButtongotomurd2.Text = "GOTO MURD"
-TextButtongotomurd2.TextColor3 = Color3.new(1, 1, 1)
-TextButtongotomurd2.TextScaled = true
-TextButtongotomurd2.TextSize = 14
-TextButtongotomurd2.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextButtongotomurd2.TextStrokeTransparency = 1
-TextButtongotomurd2.TextTransparency = 0
-TextButtongotomurd2.TextTruncate = Enum.TextTruncate.None
-TextButtongotomurd2.TextWrapped = true
-TextButtongotomurd2.TextXAlignment = Enum.TextXAlignment.Center
-TextButtongotomurd2.TextYAlignment = Enum.TextYAlignment.Center
-TextButtongotomurd2.Visible = true
-TextButtongotomurd2.ZIndex = 1
-TextButtongotomurd2.Parent = FrameFrame0
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 8)
+corner.Parent = frame
 
-TextButtonIMMORTAL3 = Instance.new("TextButton")
-TextButtonIMMORTAL3.Active = true
-TextButtonIMMORTAL3.AnchorPoint = Vector2.new(0, 0)
-TextButtonIMMORTAL3.Archivable = true
-TextButtonIMMORTAL3.AutoButtonColor = true
-TextButtonIMMORTAL3.AutoLocalize = true
-TextButtonIMMORTAL3.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-TextButtonIMMORTAL3.BackgroundTransparency = 0
-TextButtonIMMORTAL3.BorderColor3 = Color3.new(0.14902, 0.14902, 0.14902)
-TextButtonIMMORTAL3.BorderSizePixel = 0
-TextButtonIMMORTAL3.ClipsDescendants = false
-TextButtonIMMORTAL3.Font = Enum.Font.SourceSansBold
-TextButtonIMMORTAL3.LayoutOrder = 0
-TextButtonIMMORTAL3.LineHeight = 1
-TextButtonIMMORTAL3.Modal = false
-TextButtonIMMORTAL3.Name = "IMMORTAL"
-TextButtonIMMORTAL3.NextSelectionDown = nil
-TextButtonIMMORTAL3.NextSelectionLeft = nil
-TextButtonIMMORTAL3.NextSelectionRight = nil
-TextButtonIMMORTAL3.NextSelectionUp = nil
-TextButtonIMMORTAL3.Position = UDim2.new(0.5303738117218018, 0, 0.23948219418525696, 0)
-TextButtonIMMORTAL3.RootLocalizationTable = nil
-TextButtonIMMORTAL3.Rotation = 0
-TextButtonIMMORTAL3.Selectable = true
-TextButtonIMMORTAL3.Selected = false
-TextButtonIMMORTAL3.SelectionImageObject = nil
-TextButtonIMMORTAL3.Size = UDim2.new(0, 179, 0, 50)
-TextButtonIMMORTAL3.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextButtonIMMORTAL3.Style = Enum.ButtonStyle.Custom
-TextButtonIMMORTAL3.Text = "IMMORTALITY (reset)"
-TextButtonIMMORTAL3.TextColor3 = Color3.new(1, 1, 1)
-TextButtonIMMORTAL3.TextScaled = true
-TextButtonIMMORTAL3.TextSize = 14
-TextButtonIMMORTAL3.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextButtonIMMORTAL3.TextStrokeTransparency = 1
-TextButtonIMMORTAL3.TextTransparency = 0
-TextButtonIMMORTAL3.TextTruncate = Enum.TextTruncate.None
-TextButtonIMMORTAL3.TextWrapped = true
-TextButtonIMMORTAL3.TextXAlignment = Enum.TextXAlignment.Center
-TextButtonIMMORTAL3.TextYAlignment = Enum.TextYAlignment.Center
-TextButtonIMMORTAL3.Visible = true
-TextButtonIMMORTAL3.ZIndex = 1
-TextButtonIMMORTAL3.Parent = FrameFrame0
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Name = "TextLabel"
+titleLabel.Size = UDim2.new(0, 200, 0, 50)
+titleLabel.Position = UDim2.new(0.266355127, 0, 0, 0)
+titleLabel.BackgroundTransparency = 1
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.Text = "BLUX/KIRKA MM2"
+titleLabel.TextScaled = true
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.Parent = frame
 
-TextButtonknife14 = Instance.new("TextButton")
-TextButtonknife14.Active = true
-TextButtonknife14.AnchorPoint = Vector2.new(0, 0)
-TextButtonknife14.Archivable = true
-TextButtonknife14.AutoButtonColor = true
-TextButtonknife14.AutoLocalize = true
-TextButtonknife14.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-TextButtonknife14.BackgroundTransparency = 0
-TextButtonknife14.BorderColor3 = Color3.new(0.14902, 0.14902, 0.14902)
-TextButtonknife14.BorderSizePixel = 0
-TextButtonknife14.ClipsDescendants = false
-TextButtonknife14.Font = Enum.Font.SourceSansBold
-TextButtonknife14.LayoutOrder = 0
-TextButtonknife14.LineHeight = 1
-TextButtonknife14.Modal = false
-TextButtonknife14.Name = "knife1"
-TextButtonknife14.NextSelectionDown = nil
-TextButtonknife14.NextSelectionLeft = nil
-TextButtonknife14.NextSelectionRight = nil
-TextButtonknife14.NextSelectionUp = nil
-TextButtonknife14.Position = UDim2.new(0.049065422266721725, 0, 0.7346278429031372, 0)
-TextButtonknife14.RootLocalizationTable = nil
-TextButtonknife14.Rotation = 0
-TextButtonknife14.Selectable = true
-TextButtonknife14.Selected = false
-TextButtonknife14.SelectionImageObject = nil
-TextButtonknife14.Size = UDim2.new(0, 179, 0, 50)
-TextButtonknife14.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextButtonknife14.Style = Enum.ButtonStyle.Custom
-TextButtonknife14.Text = "PLAY KNIFE ANIMATION(stab)"
-TextButtonknife14.TextColor3 = Color3.new(1, 1, 1)
-TextButtonknife14.TextScaled = true
-TextButtonknife14.TextSize = 14
-TextButtonknife14.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextButtonknife14.TextStrokeTransparency = 1
-TextButtonknife14.TextTransparency = 0
-TextButtonknife14.TextTruncate = Enum.TextTruncate.None
-TextButtonknife14.TextWrapped = true
-TextButtonknife14.TextXAlignment = Enum.TextXAlignment.Center
-TextButtonknife14.TextYAlignment = Enum.TextYAlignment.Center
-TextButtonknife14.Visible = true
-TextButtonknife14.ZIndex = 1
-TextButtonknife14.Parent = FrameFrame0
+-- Helper to create buttons
+local function createButton(name, text, position)
+	local btn = Instance.new("TextButton")
+	btn.Name = name
+	btn.Size = UDim2.new(0, 179, 0, 50)
+	btn.Position = position
+	btn.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+	btn.BorderColor3 = Color3.fromRGB(38, 38, 38)
+	btn.BorderSizePixel = 0
+	btn.TextColor3 = Color3.new(1, 1, 1)
+	btn.Text = text
+	btn.TextScaled = true
+	btn.Font = Enum.Font.SourceSansBold
+	btn.AutoButtonColor = true
+	btn.Active = true
+	btn.Parent = frame
+	return btn
+end
 
-TextButtonknife25 = Instance.new("TextButton")
-TextButtonknife25.Active = true
-TextButtonknife25.AnchorPoint = Vector2.new(0, 0)
-TextButtonknife25.Archivable = true
-TextButtonknife25.AutoButtonColor = true
-TextButtonknife25.AutoLocalize = true
-TextButtonknife25.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-TextButtonknife25.BackgroundTransparency = 0
-TextButtonknife25.BorderColor3 = Color3.new(0.14902, 0.14902, 0.14902)
-TextButtonknife25.BorderSizePixel = 0
-TextButtonknife25.ClipsDescendants = false
-TextButtonknife25.Font = Enum.Font.SourceSansBold
-TextButtonknife25.LayoutOrder = 0
-TextButtonknife25.LineHeight = 1
-TextButtonknife25.Modal = false
-TextButtonknife25.Name = "knife2"
-TextButtonknife25.NextSelectionDown = nil
-TextButtonknife25.NextSelectionLeft = nil
-TextButtonknife25.NextSelectionRight = nil
-TextButtonknife25.NextSelectionUp = nil
-TextButtonknife25.Position = UDim2.new(0.5303738117218018, 0, 0.7346278429031372, 0)
-TextButtonknife25.RootLocalizationTable = nil
-TextButtonknife25.Rotation = 0
-TextButtonknife25.Selectable = true
-TextButtonknife25.Selected = false
-TextButtonknife25.SelectionImageObject = nil
-TextButtonknife25.Size = UDim2.new(0, 179, 0, 50)
-TextButtonknife25.SizeConstraint = Enum.SizeConstraint.RelativeXY
-TextButtonknife25.Style = Enum.ButtonStyle.Custom
-TextButtonknife25.Text = "PLAY KNIFE ANIMATION(throw)"
-TextButtonknife25.TextColor3 = Color3.new(1, 1, 1)
-TextButtonknife25.TextScaled = true
-TextButtonknife25.TextSize = 14
-TextButtonknife25.TextStrokeColor3 = Color3.new(0, 0, 0)
-TextButtonknife25.TextStrokeTransparency = 1
-TextButtonknife25.TextTransparency = 0
-TextButtonknife25.TextTruncate = Enum.TextTruncate.None
-TextButtonknife25.TextWrapped = true
-TextButtonknife25.TextXAlignment = Enum.TextXAlignment.Center
-TextButtonknife25.TextYAlignment = Enum.TextYAlignment.Center
-TextButtonknife25.Visible = true
-TextButtonknife25.ZIndex = 1
-TextButtonknife25.Parent = FrameFrame0
+local lobbyButton    = createButton("goto lobby", "GOTO LOBBY",                 UDim2.new(0.0490654223, 0, 0.239482194, 0))
+local sherrifButton  = createButton("goto sherrif", "GOTO SHERRIF",           UDim2.new(0.0490654223, 0, 0.488673151, 0))
+local murdButton     = createButton("goto murd", "GOTO MURD",                UDim2.new(0.530373812,  0, 0.488673151, 0))
+local immortalButton = createButton("IMMORTAL", "IMMORTALITY (reset)",       UDim2.new(0.530373812,  0, 0.239482194, 0))
+local knife1Button   = createButton("knife1", "PLAY KNIFE ANIMATION(stab)",  UDim2.new(0.0490654223, 0, 0.734627843, 0))
+local knife2Button   = createButton("knife2", "PLAY KNIFE ANIMATION(throw)", UDim2.new(0.530373812,  0, 0.734627843, 0))
 
-LocalScriptMainController0 = Instance.new("LocalScript")
-LocalScriptMainController0.Archivable = true
-LocalScriptMainController0.Disabled = false
-LocalScriptMainController0.LinkedSource = ""
-LocalScriptMainController0.Name = "MainController"
-LocalScriptMainController0.Parent = FrameFrame0
+screenGui.Parent = playerGui
+
+-- ============================================================
+-- Button Logic
+-- ============================================================
+
+-- Teleport to a specific position
+local function teleportToPosition(position)
+	local character = player.Character or player.CharacterAdded:Wait()
+	local root = character:FindFirstChild("HumanoidRootPart")
+	if root then
+		root.CFrame = CFrame.new(position)
+	end
+end
+
+-- Teleport to the player holding a given tool
+local function teleportToToolHolder(toolName)
+	local targetPlayer = nil
+	for _, p in ipairs(Players:GetPlayers()) do
+		if p ~= player then
+			if p.Backpack:FindFirstChild(toolName) or (p.Character and p.Character:FindFirstChild(toolName)) then
+				targetPlayer = p
+				break
+			end
+		end
+	end
+
+	if targetPlayer and targetPlayer.Character and player.Character then
+		local targetRoot = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+		local localRoot = player.Character:FindFirstChild("HumanoidRootPart")
+		if targetRoot and localRoot then
+			localRoot.CFrame = targetRoot.CFrame * CFrame.new(0, 3, 0)
+		end
+	end
+end
+
+-- Play a tool animation
+local function playToolAnimation(animId)
+	local character = player.Character
+	if not character then return end
+
+	local tool = character:FindFirstChildOfClass("Tool")
+	if not tool then return end
+
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	local animator = humanoid and humanoid:FindFirstChildOfClass("Animator")
+	if animator then
+		local animation = Instance.new("Animation")
+		animation.AnimationId = animId
+		local track = animator:LoadAnimation(animation)
+		track:Play()
+	end
+end
+
+-- IMMORTAL: Save position, reset character, restore position
+local savedCFrame = nil
+local isCustomReset = false
+
+local function onImmortalPressed()
+	local character = player.Character
+	if character then
+		local rootPart = character:FindFirstChild("HumanoidRootPart")
+		local humanoid = character:FindFirstChildOfClass("Humanoid")
+		if rootPart and humanoid and humanoid.Health > 0 then
+			savedCFrame = rootPart.CFrame
+			isCustomReset = true
+			local head = character:FindFirstChild("Head")
+			if head then head:Destroy() end
+			humanoid.Health = 0
+		end
+	end
+end
+
+player.CharacterAdded:Connect(function(character)
+	if isCustomReset and savedCFrame then
+		local rootPart = character:WaitForChild("HumanoidRootPart", 10)
+		if rootPart then
+			task.wait(0.15)
+			local startTime = os.clock()
+			local connection
+			connection = RunService.Heartbeat:Connect(function()
+				if rootPart and rootPart.Parent then
+					rootPart.CFrame = savedCFrame
+					rootPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				end
+				if os.clock() - startTime > 1.5 then
+					connection:Disconnect()
+					isCustomReset = false
+				end
+			end)
+		end
+	else
+		savedCFrame = nil
+		isCustomReset = false
+	end
+end)
+
+-- ============================================================
+-- Wire up buttons
+-- ============================================================
+
+lobbyButton.MouseButton1Click:Connect(function()
+	teleportToPosition(Vector3.new(0, -67, 6))
+end)
+
+sherrifButton.MouseButton1Click:Connect(function()
+	teleportToToolHolder("Gun")
+end)
+
+murdButton.MouseButton1Click:Connect(function()
+	teleportToToolHolder("Knife")
+end)
+
+immortalButton.MouseButton1Click:Connect(onImmortalPressed)
+
+knife1Button.MouseButton1Click:Connect(function()
+	playToolAnimation("rbxassetid://2467567750")
+end)
+
+knife2Button.MouseButton1Click:Connect(function()
+	playToolAnimation("rbxassetid://1957890538")
+end)
