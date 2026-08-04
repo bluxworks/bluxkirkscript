@@ -139,27 +139,40 @@ end)
 -- ============================================================
 
 local activeMapLoop = nil
-local mapConnection = nil
+local mapLoopRunning = false
 
 local function stopMapLoop()
 	activeMapLoop = nil
-	if mapConnection then
-		mapConnection:Disconnect()
-		mapConnection = nil
-	end
+	mapLoopRunning = false
 end
 
 local function startMapLoop(mapName, position)
 	stopMapLoop()
 	activeMapLoop = mapName
+	mapLoopRunning = true
 
-	mapConnection = RunService.Heartbeat:Connect(function()
-		local character = player.Character
-		if character then
-			local root = character:FindFirstChild("HumanoidRootPart")
-			if root then
-				root.CFrame = CFrame.new(position)
-				root.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+	task.spawn(function()
+		while mapLoopRunning do
+			local character = player.Character
+			if character then
+				local root = character:FindFirstChild("HumanoidRootPart")
+				local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+				-- Teleport to the target position
+				if root then
+					root.CFrame = CFrame.new(position)
+					root.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				end
+
+				-- Reset the character (kill it)
+				if humanoid and humanoid.Health > 0 then
+					humanoid.Health = 0
+				end
+			end
+
+			-- Wait for the character to respawn before looping again
+			if mapLoopRunning then
+				player.CharacterAdded:Wait()
 			end
 		end
 	end)
